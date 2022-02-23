@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <title>Dice Game</title>
+
+<!-- Such as how to make a 'topnav' and how to make html cards -->
+<!--
+
+ Author: Katheryn Knutson
+
+ Class:  Software Engineering
+
+ Project: Lab 2 Dice Game
+
+ Description: Plays a dice game
+-->
+  
+<style>
+#top {
+   /* kinda the header */
+    border: 1px solid black;
+    padding: 25px;
+    
+    background-repeat: round;
+    text-align: center;
+    text-decoration: aqua;
+    text-shadow: 100ch;
+  }
+ /* fonts, color and background */
+  h1 {
+    color: #000000;
+    font-family: Helvetica, 'Open Sans', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    h2{
+      color: #a01a1a;
+    }
+
+    p{
+      font-size: 60px;
+      color: #a01a1a;
+    }
+
+
+    body{
+      background: url("https://i.ibb.co/J3T2SxN/dice-gif.gif"); 
+    }
+
+#button{
+    text-align: center;
+    font-size: 60px;
+    }
+
+#sided {
+    font-size: 40px;
+}
+ /* top of page */
+#header {
+    border: 1px solid black;
+    padding: 50px;
+    
+    background-repeat: round;
+    text-align: center;
+    text-decoration: aqua;
+    text-shadow: 100ch;
+  }
+   /* 3 of these for players and instructions*/
+  .column {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+    
+  }
+  
+  /* blends columns*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+  
+   /* W3SCHOOLS */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+
+</style>
+<script>
+function RollSixSidedDice() {
+  //this just rolls dice for both boxes from the one button
+  document.getElementById("dice").value = Math.floor(Math.random()*6) + 1;
+  
+  document.getElementById("dice1").value = Math.floor(Math.random()*6) + 1;
+  
+
+}
+//this is the function that changes text + gives confetti for wins and ties
+
+function Winner(){
+  let header = document.querySelector("p");
+var x = document.getElementById("dice").value;
+var y =  document.getElementById("dice1").value;
+
+if (x > y) {
+  confetti();
+  confetti({
+  spread: 100
+  });
+  
+  header.innerText = "Player 1 Wins";
+}
+if(x < y) {
+  confetti();
+  confetti({
+  spread: 100
+  });
+  header.innerText = "Player 2 Wins";
+
+}
+
+if (x == y){
+  header.innerText = "Tie";
+
+}
+
+
+}
+
+</script>
+<head>
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head> 
+
+<body>
+  <!-- Validated with 2 errors -->
+  <!-- Header to welcome guests with box around it -->
+  <body onload="RollSixSidedDice()">
+    <div id="header">
+        <h1>Welcome to the Dice Game!</h1>
+        </div>
+
+        <div class="row">
+            <div class="column">
+              <h2>Player 1</h2>
+              <input id="dice" type="text" value="" size="10" disabled><br><br>
+
+
+
+
+            </div>
+            <!-- this has the button that rolls dice and changes text in this column -->
+            <div class="column">
+              <h2>Instructions</h2>
+              <p>The player who rolls the higher number will win! Click the button to roll both dice and see who wins!</p>
+              <button type="button" autofocus; onclick="RollSixSidedDice(); Winner();">Roll Dice</button><br><br>
+            <!-- button rolls dice, changes text, gets winner, throws confetti -->
+            </div>
+
+            <div class="column">
+              <h2>Player 2</h2>
+              <input id="dice1" type="text" value="" size="10" disabled><br><br>
+
+
+            </div>
+          </div>
+
+
+
+
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d5df8067ccf2913',m:'oVwEVHHGzMoFGhjRx8Ga6PrfCkKty3lA8MnS7XEG2Tg-1643579981-0-AUmSyxErRwVxZwr+s8V2SOfnVFzQMQmRC7spLropvKd7qB6NBewdZZiTWpw6BdHzoifscbuytLCppLpd4AeV8CJIfgN2F4IQV/pjA/NcKBYXynHGhchXLBBK+UY2OFN4dwZA+KnejEVyEDH8+U4IDyaSKqyXtm67VUlAGrBkI26CDcrLgFv3CeOVPL1Pg7pY1g==',s:[0x3dc8952380,0x2fd5e975d9],}})();</script></body>
+</html>

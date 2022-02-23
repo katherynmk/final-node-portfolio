@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <title>Resume</title>
+
+
+<!-- !!!Note- much of the code has been heavily influenced by W3Schools CSS tutorial page!!!-->
+<!-- Such as how to make a 'topnav' and how to make html cards -->
+<!--
+
+ Author: Katheryn Knutson
+
+ Class:  Software Engineering
+
+ Project: Lab 2 Resume
+
+ Description: Katie's resume with job history
+
+-->
+
+
+<!-- sometimes works? -->
+<style>
+  /* Top of page config */
+  *{
+    box-sizing: border-box;
+    }
+ /* whole page fonts*/
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    background-image: url("https://ibb.co/VTNyCSs");
+    background: #f1f1f1;
+  }
+  /* specific for types of headers*/
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+
+  .header h5 {
+    font-size: 50px;
+  }
+
+ /* W3SCHOOLS */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+  }
+  
+ /* W3SCHOOLS */
+  .topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+/* W3SCHOOLS */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+/*left side */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+ /* right side*/
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  /*this is for each card used in each column (learned from w3) */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+ /* helps smooth distance between cards*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+
+  
+  /* W3SCHOOLS */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* W3SCHOOLS */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+        
+        </style>
+
+<body>
+<!-- Validated with no errors -->
+<div class="header">
+  <h1>Katheryn Knutson</h1>
+  <p>Software Engineer</p>
+</div>
+<!-- Intro to myself with links to other projects -->
+<div class="topnav">
+  <p>I am currently a student at Lewis University in Romeoville IL. I am a junior pursing a degree in computer science with a concentration in
+    software engineering. I manage being a full time student and working part time. I am on the highest academic scholarship my University
+    offers; I am dedicated to be successful in everything I do.</p>
+  <a href="https://github.com/katherynmk">GitHub</a>
+  <a href="https://discord.gg/BzZjznqg77">Discord</a>
+  <a href="https://green-dune-055e45310.1.azurestaticapps.net/">RegExp</a>
+  <a href="https://red-mushroom-069724510.1.azurestaticapps.net/" style="float:left">Dice Roller</a>
+</div>
+
+<!-- Left column with cards for each category  -->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Highlights of Qualifications</h2>
+      
+      <ul>
+          <li>Spent four years in high school doing non-advanced through advanced computer classes</li>
+          <li>Went to the Cisco Networking Academy for two years</li>
+          <li>Solid organizational and project management</li>
+          <li>Highly developed leadership and teamwork skills</li>
+          <li>Student athlete and club leader</li>
+      </ul>
+
+    </div>
+    <div class="card">
+        <h2>Technical Skils</h2>
+        <h5>Operating Systems</h5>
+        <ul>
+            <li>Windows, Windows Server, iOS, ChromeOS</li>
+          </ul>
+
+        <h5>Networking</h5>
+        <ul>
+            <li>Cisco Networking Academy</li>
+        </ul>
+
+        <h5>Languages</h5>
+        <ul>
+            <li>Java, C++, Javascript, Python</li>
+        </ul>
+
+        <h5>Applications</h5>
+        <ul>
+            <li>Microsft Office, Adobe Photoshop, Google Documents, Google Slides, Google Excel </li>
+        </ul>
+
+        <h5>Networking</h5>
+        <ul>
+            <li>Cisco Networking Academy</li>
+        </ul>
+
+        <h5>Hardware</h5>
+        <ul>
+            <li>Computer Hardware and Repair</li>
+        </ul>
+      </div>
+
+    <div class="card">
+      <h2>Work Experience</h2>
+      <h5>Waitress, Mizu Sushi House, 2017-2020</h5>
+      <ul>
+        <li>Worked with costumers and people on a daily basis</li>
+        <li>Managed my time and attention effieciently</li>
+        <li>Cleaned the restaurant on a daily basis</li>
+        <li>Maintained close attention to detail</li>
+        <li>Had developed memorization tools to remember orders while also organizing tasks</li>
+      </ul>
+      
+      <h5>Package Handler, UPS, 2020-current</h5>
+      <ul>
+        <li>Being on time and present on a consistent basis</li>
+        <li>Completing my work in a timely order</li>
+        <li>Working well with others</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Right column with cards for each category -->
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Education</h2>
+
+      <ul>
+        <li>Amos Alonzo Stagg High School</li>
+        <li>Palos Hills IL</li>
+        <li>High School Diploma</li>
+        <li>2016-2020</li>
+        <li>Lewis University</li>
+        <li>Undergraduate in Computer Science</li>
+        <li>2020-current</li>
+
+      </ul>
+    </div>
+
+
+    <div class="card">
+      <h3>Awards</h3>
+      <h5>Operating Systems</h5>
+      <ul>
+          <li>National Junior Honors Society</li>
+          <li>National Honors Society</li>
+          <li>Top 20% of High School Graduating Class</li>
+          <li>Lewis University Presidential Scholarship</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Leadership Activites</h3>
+        <h5>Vice President of the Virtual Reality Club</h5>
+        <ul>
+            <li>I manage an entire lab of virtual reality equipment. I organize and
+                execute two large scale events every semester. I manage funding for the club. I reach out to teachers and organizations to further promote
+                the club. I also manage all of the members.</li>
+          </ul>
+
+      </div>
+
+      <div class="card">
+        <h3>Projects</h3>
+        <h5>Operating Systems</h5>
+        <ul>
+            <li>DataSAIL</li>
+            <li>Metaverse</li>
+          </ul>
+
+      </div>
+
+      <div class="card">
+        <h3>Internships</h3>
+        <h5>Harvey School District</h5>
+        <ul>
+            <li>District office for the schools of Harvey</li>
+          </ul>
+
+      </div>
+  </div>
+
+</div>
+
+</body>
+</html>

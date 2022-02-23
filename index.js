@@ -8,19 +8,21 @@ router.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
+router.get('/dice.html',function(req,res){
+  res.sendFile(path.join(__dirname+'/dice.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
+router.get('/resume.html',function(req,res){
+  res.sendFile(path.join(__dirname+'/resume.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
-//TypeError: path must be absolute or specify root to res.sendFile
-//at ServerResponse.sendFile (C:\node_modules\express\lib\response.js:425:11)
-//at C:\Users\katie\OneDrive\Documents\Software Engineering\Sprint 3\portfolio-node\server.js:7:9
-//at Layer.handle [as handle_request] (C:\node_modules\express\lib\router\layer.js:95:5)
-//at next (C:\node_modules\express\lib\router\route.js:137:13)
-//at Route.dispatch (C:\node_modules\express\lib\router\route.js:112:3)
-//at Layer.handle [as handle_request] (C:\node_modules\express\lib\router\layer.js:95:5)
-//at C:\node_modules\express\lib\router\index.js:281:22
-//at Function.process_params (C:\node_modules\express\lib\router\index.js:335:12)
-//at next (C:\node_modules\express\lib\router\index.js:275:10)
-//at expressInit (C:\node_modules\express\lib\middleware\init.js:40:5) 
+router.get('/regexp.html',function(req,res){
+  res.sendFile(path.join(__dirname+'/regexp.html'));
+  //__dirname : It will resolve to your project folder.
+});
+
 
 
 app.use('/', router);

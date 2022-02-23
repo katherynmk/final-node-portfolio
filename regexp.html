@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <title>RegExp</title>
+
+<!-- Such as how to make a 'topnav' and how to make html cards -->
+<!--
+
+ Author: Katheryn Knutson
+
+ Class:  Software Engineering
+
+ Project: Lab 2 Dice Game
+
+ Description: Plays a dice game
+-->
+<style>
+#top {
+   /* kinda the header */
+    border: 1px solid black;
+    padding: 25px;
+    
+    background-repeat: round;
+    text-align: center;
+    text-decoration: aqua;
+    text-shadow: 100ch;
+  }
+ /* fonts, color and background */
+  h1 {
+    color: #fffafa;
+    font-family: Helvetica, 'Open Sans', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    h2{
+      color: #f8f1f1;
+    }
+
+    p{
+      font-size: 30px;
+      color: #f3f2f2;
+      padding: 50px;
+    }
+
+
+    body{
+     /* background: url("https://i.ibb.co/FJ6G2tX/code-matrix.gif"); */
+      background-color: #000000;
+    }
+
+#button{
+    text-align: center;
+    font-size: 60px;
+    padding: 50px;
+    }
+
+#sided {
+    font-size: 40px;
+}
+.box{
+  float: center;
+  width: 600px;
+  padding: 10px;
+  border: 5px solid rgb(255, 254, 254);
+  margin: 0;
+}
+ /* top of page */
+#header {
+    border: 1px solid black;
+    padding: 50px;
+    
+    background-repeat: round;
+    text-align: center;
+    text-decoration: aqua;
+    text-shadow: 100ch;
+  }
+   /* 3 of these for players and instructions*/
+  .column {
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    text-align: center;
+    
+  }
+  
+  /* blends columns*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+  
+   /* W3SCHOOLS */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+    
+    </style>
+
+
+    <script>
+
+function testInput() {
+  let header = document.querySelector("p");
+  var re = document.getElementById("testleft").value;
+  var str = document.getElementById("testright").value;
+  var regex = new RegExp(re);
+  
+  console.log(regex.test(str));
+
+if (regex.test(str)){
+  header.innerText = "True";
+}  
+
+else{
+  header.innerText = "False";
+}
+  
+}
+    </script>
+
+
+<body>
+  <!-- Validated with 2 errors -->
+  <!-- Header to welcome guests with box around it -->
+  <body>
+    <div id="header">
+        <h1>Test Your Expressions Here</h1>
+        </div>
+
+        <div class="row">
+            <div class="column">
+              <h2>Expression Input</h2>
+              <!-- foo -->
+              
+              <input id="testleft" type="text"  size="50" height="400" value = "foo"><br>
+              
+
+
+
+            </div>
+            <!-- this has the button that validates the left box with the right box -->
+            <div class="column">
+              <h2>Instructions</h2>
+              <div class = "box">
+              <p>Type your expression in the left box, and the string to test it against in the right box. Then click the button to test.</p>
+              </div>
+              
+                <button type="button"  onclick="testInput()">Validate</button><br><br>
+
+                
+              
+
+              
+            
+            </div>
+
+            <div class="column">
+              <h2>Expression Test</h2>
+              <!-- table football -->
+              <input id="testright" type="text"  pattern= "regexp" size="50" height="400" value = "football"><br><br>
+           
+
+
+            </div>
+          </div>
+
+
+
+
+</body>
+  </html>
